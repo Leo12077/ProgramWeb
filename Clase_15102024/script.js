@@ -100,7 +100,7 @@ const user = {
         delegacion:"Los Pinos"
     },
     amigos: ["Raul","Maria"],
-    activo:true
+    activo: false
 }
 
 //Consola nombre apellidoP apellidoM
@@ -109,14 +109,31 @@ const user = {
 //alert calle no colonia delegacion
 //consola amigos
 
-function datos(user){
-    console.log(datos);
+function datos(user) {
+    console.log(user.nombre + " " + user.apellidoP + " " + user.apellidoM);
 }
+datos(user);
 
 
-if (user(true)){
-    alert("activo");
+if (user.activo){
+    alert("El usuario esta activo");
 } else{
-    alert("inactivo");
+    alert("El usuario esta inactivo");
 }
 
+function edad(user){
+    console.log(user.edad + " años");
+}
+edad(user);
+
+function direccion(user){
+    alert(user.direccion.calle + " " + user.direccion.no + " " + user.direccion.colonia + " " + user.direccion.delegacion);
+}
+
+direccion(user);
+
+function amigos(user){
+    console.log(user.amigos);
+}
+
+amigos(user);
